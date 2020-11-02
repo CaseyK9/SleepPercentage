@@ -1,0 +1,72 @@
+name: SleepPercentage
+main: com.sammurphy.sleepPercentage.SleepPercentage
+author: [Master_Mas]
+website: sammurphy.software
+description: After a percentage of the server is sleeping it will change to day
+version: 1.3.0
+api-version: 1.13
+commands:
+    spset:
+        description: Sets the Percentage which is required for sleeping
+        usage: /spset <Percentage>
+        permission: sp.set
+        permission-message: You don't have permission to do that
+    sp:
+        description: Sets of the plugin is Enabled or Disabled
+        usage: /sp
+        permission: sp.state
+        permission-message: You don't have permission to do that
+    spdaytick:
+        description: Will Set the Day tick it changes to
+        usage: /spdaytick <Tick>
+        permission: sp.daytick
+        permission-message: You don't have permission to do that
+    spenable:
+        description: Allows you to set if an individual world is enabled or not
+        usage: /spenable [World Name] <Enabled>
+        permission: sp.enabled
+        permission-message: You don't have permission to do that
+    sptime:
+        description: Allows you to check what time it is in other worlds
+        usage: /sptime [World Name]
+        permission: sp.timeInOthetWorld
+        permission-message: You don't have permission to do that
+permissions:
+    sp.set:
+        description: Sets the Percentage which is required for sleeping
+        default: op
+    sp.state:
+        description: Will Enable/Disable the Sleep Percentage
+        default: op
+    sp.daytick:
+        description: Will Set the Day tick it changes to
+        default: op
+    sp.enabled:
+        description: Allows you to set if an individual world is disabled or not
+        default: op
+    sp.timeInOtherWorld:
+        description: Check to see time in other worlds
+        default: op
+    sp.sleepWhileMobNear.world.*:
+        description: Allows a player to sleep while a mob is nearby
+        default: op
+    sp.receiveAdminCommandMessage.*:
+        description: Allows players to recieve messages when another player issues a admin command for Sleep Percentage
+        default: op
+        children:
+           sp.receiveAdminCommandMessage.sleepPercentageEnable: true
+           sp.receiveAdminCommandMessage.sleepPercentageDisable: true
+           sp.receiveAdminCommandMessage.setWorldPercentage: true
+           sp.receiveAdminCommandMessage.setWorldDayTick: true
+           sp.receiveAdminCommandMessage.setWorldDisabled: true
+           sp.receiveAdminCommandMessage.sleepPercentageStatus: true
+           sp.receiveAdminCommandMessage.changeTime: true
+    sp.sleepingInWorld.worlds.*:
+        description: Allows player to sleep in specific world
+        default: true
+    sp.excludeFromSleepingChecks.worlds.*:
+        description: Allows a player to be excluded from checks towards the sleep percentage
+        default: op
+    sp.changeTime:
+        description: Allows a player to change the time in a select world
+        default: op
