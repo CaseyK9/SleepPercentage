@@ -1,0 +1,112 @@
+messages:
+  pluginChangeState:
+    #[0] = Status of Sleep Percentage, [1] = Player who set it
+    color:
+      - 'GOLD'
+      - 'LIGHT_PURPLE'
+      - 'GRAY'
+    message: '{2}Sleep Percentage Enabled: {0}[0]'
+    admin: '{2}Sleep Percentage Enabled: {0}[0]{2} set by {1}[1]'
+  set:
+    #[0] = The percentage that you have set it to, [1] = World Name, [2] = Player who sent the command
+    color:
+      - 'GRAY'
+      - 'LIGHT_PURPLE'
+      - 'GOLD'
+    message: '{0}Set Sleep Percentage to {2}[0]%{0} for {2}[1]'
+    admin: '{1}[2]{0} has set the Sleep Percentage to {2}[0]%{0} on {1}[1]'
+  setStatus:
+      #[0] = The percentage of the world, [1] = World Name
+      color:
+        - 'GRAY'
+        - 'LIGHT_PURPLE'
+        - 'GOLD'
+      message: '{0}Sleep percentage on {1}[1]: {2}[0]%'
+  notSleeping:
+    #[0] = Player Name, [1] = World Name
+    color:
+      - 'LIGHT_PURPLE'
+      - 'GRAY'
+    message: '{0}[0]{1} is no longer sleeping'
+  sleeping:
+    #[0] = Player Name, [1] = World Name
+    color:
+      - 'LIGHT_PURPLE'
+      - 'GOLD'
+    message: '{0}[0]{1} is now sleeping'
+  total:
+    #[0] = Current amount of players sleeping, [1] = Total amount of players sleeping, [2] = World Name
+    color:
+      - 'GOLD'
+      - 'GRAY'
+    message: '{1}Currently, {0}[0]%{1} of players are sleeping out of the {0}[1]{1}% needed'
+  daytick:
+    #[0] = Day Tick that you have set, [1] = World Name, [2] = Player who sent the command
+    color:
+      - 'GOLD'
+      - 'LIGHT_PURPLE'
+      - 'GRAY'
+    message: '{2}Set Day Tick to {0}[0]{2} for {1}[1]'
+    admin: '{1}[2]{2} has set the Day Tick to {0}[0]{2} on {1}[1]'
+  daytickValue:
+      #[[0] = World Name, [1] = Daytick value
+      color:
+        - 'GOLD'
+        - 'LIGHT_PURPLE'
+        - 'GRAY'
+      message: '{2}Day Tick on {1}[0]{2}: {0}[1]'
+  worldEnabled:
+    #[0] = If you enabled the world or not, [1] = World Name, [2] = Player who sent command
+    color:
+      - 'GOLD'
+      - 'LIGHT_PURPLE'
+      - 'GRAY'
+    message: '{2}Set {1}[1]{2} to be enabled: {0}[0]'
+    admin: '{1}[2]{2} has set {1}[1]{2} to be enabled: {0}[0]'
+  worldEnabledStatus:
+      #[0] = Enabled status of world, [1] = World Name
+      color:
+        - 'GOLD'
+        - 'LIGHT_PURPLE'
+        - 'GRAY'
+      message: '{1}[1]{2} enabled: {0}[0]'
+  notAllowedToSleep:
+    #[0] = World Name
+    color:
+      - 'GOLD'
+      - 'LIGHT_PURPLE'
+    message: '{0}You are not allowed to sleep in {1}[0]'
+  timeInWorld:
+    #[0] = Time in World, [1] = World Name, [2] = English name of Time
+    color:
+      - 'GRAY'
+      - 'LIGHT_PURPLE'
+      - 'GOLD'
+      - 'DARK_GRAY'
+    message: '{0}It is currently {2}[0]{3} ([2]){0} in {1}[1]'
+  pluginState:
+    #[0] What state the plugin is in currently
+    color:
+    - 'GOLD'
+    - 'GRAY'
+    message: '{1}Sleep Percentage is currently enabled: {0}[0]'
+  adjustTime:
+    #[0] New Time in world, [1] = World Name, [2] = Player who sent command, [3] = English name of Time
+    color:
+    - 'GOLD'
+    - 'GRAY'
+    - 'LIGHT_PURPLE'
+    - 'DARK_GRAY'
+    message: '{2}[1]{1} has been set to {0}[0]{3}([3])'
+    admin: '{2}[1]{1} has been set to {0}[0]{3}([3]){1} by {2}[2]'
+permissions:
+  defaultFallback:
+    color:
+      - 'RED'
+    error: '{0}You don''t have permission to perform this action'
+  sleepingInWorldWildcard:
+    #[0] = World Name
+    color:
+      - 'RED'
+      - 'GRAY'
+    error: '{0}Your not allowed to sleep in {1}[0]'
