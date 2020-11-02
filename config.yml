@@ -1,0 +1,5 @@
+percentageperworld: []
+sleepingEnabled: true
+#Change this to a lower number if you are getting large lag spikes with larges amounts of players on the server due to sleeping.
+cleaningInterval: 100
+overloadTimeCommand: false
